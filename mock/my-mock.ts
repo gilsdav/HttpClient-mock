@@ -8,7 +8,7 @@ export function myMock(url: string, method: string, request: HttpRequest<any> ):
 
     let result: Observable<HttpEvent<any>> | false = false;
 
-    if ((environment.mock.all || environment.mock.services.getUsers)
+    if ((environment.mock.all || environment.mock.services.getMy)
         && url.includes('api/my') && method === 'GET') {
         result = of(
             new HttpResponse({
